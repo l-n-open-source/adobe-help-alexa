@@ -37,6 +37,12 @@ var newSessionHandlers = {
     }
 };
 
+var myHandler = {
+ 'hello' = function () {
+     this.emit(':ask', "I'm fine, how about you?")
+  }
+}
+
 var main = function (event) {
     console.log('ALEXA Event', event.request.type + '!');
 
@@ -50,7 +56,7 @@ var main = function (event) {
                     });
                 alexaSDK.APP_ID = APP_ID;
                 alexaSDK.resources = languageStrings;
-                alexaSDK.registerHandlers(newSessionHandlers);
+                alexaSDK.registerHandlers(newSessionHandlers, myHandler);
                 return alexaSDK.execute();
             } catch (err) {
                 console.log(err);
