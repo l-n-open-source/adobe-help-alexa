@@ -39,10 +39,7 @@ var newSessionHandlers = {
 
 var myHandler = {
  'hello' : function () {
-     this.emit(':ask', "I'm fine, how about you?")
-  },
-  'findcar' : function () {
-     this.emit(':tell', "Dude, I have no idea where you left your car.")
+     this.emit(':tell', this.event.request.intent.slots.querystr.value + "And now what?");
   }
 }
 
