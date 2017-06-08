@@ -1,0 +1,9 @@
+package:
+  name: adobe-help-alexa-skill
+  version: 1.0
+  license: Apache-2.0
+  actions:
+    adobe-help-skill:
+      version: 1.0
+      location: action/alexa-skill.js
+      runtime: nodejs@6
