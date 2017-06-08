@@ -38,7 +38,7 @@ var newSessionHandlers = {
 };
 
 var myHandler = {
- 'hello' = function () {
+ 'hello' : function () {
      this.emit(':ask', "I'm fine, how about you?")
   }
 }
